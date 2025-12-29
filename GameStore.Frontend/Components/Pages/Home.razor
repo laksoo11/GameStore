@@ -1,0 +1,85 @@
+﻿@page "/"
+@using GameStore.Frontend.Models
+@* @using Models *@
+
+<PageTitle>Game Catalog</PageTitle>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Genre</th>
+        <th class="text-end">Price</th>
+        <th>Release Date</th>
+        
+    </thead>
+    <tbody>
+        @foreach (var game in games){
+            <tr>
+                <td>@game.Id</td>
+                <td>@game.Name</td>
+                <td>@game.Genre</td>
+                <td class="text-end">@game.Price.ToString("C2")</td>
+                <td>@game.ReleaseDate</td>
+                <td>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private GameSummary[] games = 
+
+    [
+    new (){
+        Id = 1,
+        Name = "Witcher 3",
+        Genre = "Fantasy RPG",
+        Price = 15.99M,
+        ReleaseDate = new DateOnly(2015,5,20)
+        
+    },
+
+     new (){
+        Id = 2,
+        Name = "Cyberpunk 2077",
+        Genre = "Future RPG",
+        Price = 20.99M,
+        ReleaseDate = new DateOnly(2020,9,20)},
+
+     new (){
+        Id = 3,
+        Name = "Baldur's Gate 3",
+        Genre = "Fantasy RPG",
+        Price = 15.99M,
+        ReleaseDate = new DateOnly(2023,3,20)},
+
+    new (){
+        Id = 4,
+        Name = "GTA V",
+        Genre = "RPG",
+        Price = 5.99M,
+        ReleaseDate = new DateOnly(2014,6,20)},
+
+    new (){
+        Id = 5,
+        Name = "God Of War",
+        Genre = "RPG",
+        Price = 5.99M,
+        ReleaseDate = new DateOnly(2018,3,22)},
+
+     new (){
+        Id = 6,
+        Name = "Elden Ring",
+        Genre = "RPG, Boss Fight, Fighiting",
+        Price = 5.99M,
+        ReleaseDate = new DateOnly(2022,11,22)}, 
+
+    
+
+    ];
+
+}
