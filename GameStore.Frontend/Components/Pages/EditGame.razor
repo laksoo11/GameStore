@@ -3,6 +3,7 @@
 @using GameStore.Frontend.Clients
 @using GameStore.Frontend.Models
 @using Microsoft.AspNetCore.Http.HttpResults
+@inject NavigationManager NavigationManager
 
 <PageTitle>New Game</PageTitle>
 <h3>New Game</h3>
@@ -45,7 +46,8 @@ else{
     <label for="releaseDate" class="form-label">Release Date:</label>
     <InputDate id="releaseDate" @bind-Value="game.ReleaseDate" class="form-control"/>
   </div>
-  <button type="submit" class="btn btn-primary]">Save</button>
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a role="button" class="btn btn-secondary" href="/">Cancel</a>
 
 </EditForm>
 
@@ -79,5 +81,6 @@ else{
 private void HandelSubmit()
 {
     gamesClient.AddGame(game);
+    NavigationManager.NavigateTo("/");
 }
 }
