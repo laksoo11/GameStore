@@ -36,3 +36,4 @@ C:\Users\Acer\Desktop\Blazor\GameStore\GameStore.Frontend\obj\Debug\net10.0\refi
 C:\Users\Acer\Desktop\Blazor\GameStore\GameStore.Frontend\obj\Debug\net10.0\GameStore.Frontend.pdb
 C:\Users\Acer\Desktop\Blazor\GameStore\GameStore.Frontend\obj\Debug\net10.0\GameStore.Frontend.genruntimeconfig.cache
 C:\Users\Acer\Desktop\Blazor\GameStore\GameStore.Frontend\obj\Debug\net10.0\ref\GameStore.Frontend.dll
+C:\Users\Acer\Desktop\Blazor\GameStore\GameStore.Frontend\obj\Debug\net10.0\GameStore.Frontend.sourcelink.json
