@@ -30,10 +30,12 @@ else{
         <th>Genre</th>
         <th class="text-end">Price</th>
         <th>Release Date</th>
+        <th class="text-end">Actions</th>
         
     </thead>
     <tbody>
-        @foreach (var game in games){
+        @foreach (var game in games)
+        {
             <tr>
                 <td>@game.Id</td>
                 <td>@game.Name</td>
@@ -41,6 +43,14 @@ else{
                 <td class="text-end">@game.Price.ToString("C2")</td>
                 <td>@game.ReleaseDate</td>
                 <td>
+
+                    <div>
+                        <a class="btn btn-primary me-2" role="button" href="@GameUrl(game.Id)">
+                            <i class="bi bi-pencil-fill"></i>
+
+
+                        </a>
+                    </div>
 
                 </td>
 
@@ -58,6 +68,9 @@ else{
     {
         games = Client.GetGames();
     }
+
+    private static string GameUrl(int id) => $"/editgame/{id}";
+
 
 
 }
