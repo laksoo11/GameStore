@@ -1,1 +1,30 @@
-GET http://localhost:5238
+GET http://localhost:5238/games
+
+###
+
+GET http://localhost:5238/games/10
+
+###
+POST http://localhost:5238/games
+Content-Type: application/json
+
+{
+  "name": "Minecraft",
+  "genre": "Kids and Family",
+  "price": 19.99,
+  "releaseDate": "2011-11-18"
+}
+
+###
+PUT  http://localhost:5238/games/7
+Content-Type: application/json
+
+{
+    "name": "Witcher 3 Blood and Wine",
+    "genre": "RPG",
+    "price": 5.99,
+    "releaseDate": "2015-07-20"
+}
+
+### 
+DELETE http://localhost:5238/games/2
