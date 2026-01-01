@@ -38,10 +38,11 @@ private static readonly List<GameDto> games = [
         new DateOnly(2014,6,20)),
     ];
 
-    public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
-    {
+public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
+{
 
-        var group = app.MapGroup("games");
+    var group = app.MapGroup("games")
+                    .WithParameterValidation();
 
 // GET /games
 group.MapGet("/", () => games);
@@ -59,6 +60,7 @@ group.MapGet("/{id}", (int id) =>
 // POST /games
 group.MapPost("/", (CreateGameDto newGame) =>
 {
+    
     GameDto game = new(
         games.Count +1,
         newGame.Name,
