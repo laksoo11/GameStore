@@ -2,7 +2,7 @@ GET http://localhost:5238/games
 
 ###
 
-GET http://localhost:5238/games/10
+GET http://localhost:5238/games/3
 
 ###
 POST http://localhost:5238/games
@@ -16,15 +16,15 @@ Content-Type: application/json
 }
 
 ###
-PUT  http://localhost:5238/games/2
+PUT  http://localhost:5238/games/3
 Content-Type: application/json
 
 {
     "name": "Witcher 3 Blood and Wine",
-    "genre": "RPG",
+    "genreId": "1",
     "price": 5.99,
     "releaseDate": "2015-07-20"
 }
 
 ### 
-DELETE http://localhost:5238/games/2
+DELETE http://localhost:5238/games/4
