@@ -14,6 +14,9 @@ var app = builder.Build();
 
 app.MapGamesEndpoints();
 
+app.MapGet("/", () => "GameStore API is running!");
+
 app.MigrateDb();
 
 app.Run();
+
