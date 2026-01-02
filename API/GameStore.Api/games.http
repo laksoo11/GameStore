@@ -9,10 +9,10 @@ POST http://localhost:5238/games
 Content-Type: application/json
 
 {
-  "name": "Street Fighter II",
-  "genreId": 1,
-  "price": 9.99,
-  "releaseDate": "1999-11-18"
+  "name": "Final Fantasy XIV",
+  "genreId": 2,
+  "price": 49.99,
+  "releaseDate": "2010-11-18"
 }
 
 ###
