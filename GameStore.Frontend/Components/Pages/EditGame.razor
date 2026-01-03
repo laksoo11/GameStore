@@ -136,7 +136,7 @@ private void HandelSubmit()
       game.Id = Id.Value;
       GamesClient.UpdateGame(game);
     }
-    GamesClient.AddGame(game);
+    @* GamesClient.AddGame(game); *@
     NavigationManager.NavigateTo("/");
 }
 }

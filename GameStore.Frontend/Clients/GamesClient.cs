@@ -3,7 +3,7 @@ using GameStore.Frontend.Models;
 
 namespace GameStore.Frontend.Clients;
 
-public class GamesClient
+public class GamesClient(HttpClient httpClient)
 {
 
     private readonly List <GameSummary> games = 
@@ -50,7 +50,7 @@ public class GamesClient
     new (){
         Id = 6,
         Name = "Elden Ring",
-        Genre = "RPG, Boss Fight, Fighiting",
+        Genre = "RPG",
         Price = 5.99M,
         ReleaseDate = new DateOnly(2022,11,22)}, 
 
@@ -63,7 +63,7 @@ public class GamesClient
 
     ];
 
-    private readonly Genre[] genres = new GenresClient().GetGenres();
+    private readonly Genre[] genres = new GenresClient(httpClient).GetGenres();
 
     public GameSummary[] GetGames() => [.. games];
 

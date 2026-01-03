@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5VcsXTf6RAU=",
+  "dgSpecHash": "A1lh6jgBsu0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Desktop\\Blazor\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\OneDrive\\Desktop\\Blazor\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.1\\microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512"
   ],
