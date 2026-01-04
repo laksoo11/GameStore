@@ -9,6 +9,10 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddSingleton<GenresClient>();
 builder.Services.AddSingleton<GamesClient>();
+
+
+// FOR API CONFIGURATION ONLY 
+
 // var gameStoreApiUrl = "http://localhost:5238";
 
 // builder.Services.AddHttpClient<GamesClient>(
