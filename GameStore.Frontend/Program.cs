@@ -7,14 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
-var gameStoreApiUrl = "http://localhost:5238";
+builder.Services.AddSingleton<GenresClient>();
+builder.Services.AddSingleton<GamesClient>();
+// var gameStoreApiUrl = "http://localhost:5238";
 
-builder.Services.AddHttpClient<GamesClient>(
-    client => client.BaseAddress = new Uri(gameStoreApiUrl));
+// builder.Services.AddHttpClient<GamesClient>(
+//     client => client.BaseAddress = new Uri(gameStoreApiUrl));
 
 
-builder.Services.AddHttpClient<GenresClient>(
-    client => client.BaseAddress = new Uri(gameStoreApiUrl));
+// builder.Services.AddHttpClient<GenresClient>(
+//     client => client.BaseAddress = new Uri(gameStoreApiUrl));
 
 
 

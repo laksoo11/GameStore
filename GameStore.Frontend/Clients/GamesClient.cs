@@ -3,7 +3,7 @@ using GameStore.Frontend.Models;
 
 namespace GameStore.Frontend.Clients;
 
-public class GamesClient(HttpClient httpClient)
+public class GamesClient
 {
 
     private readonly List <GameSummary> games = 
@@ -35,10 +35,10 @@ public class GamesClient(HttpClient httpClient)
 
     new (){
         Id = 4,
-        Name = "GTA V",
-        Genre = "RPG",
-        Price = 5.99M,
-        ReleaseDate = new DateOnly(2014,6,20)},
+        Name = "WWE",
+        Genre = "Fighting",
+        Price = 9.99M,
+        ReleaseDate = new DateOnly(2018,3,10)},
 
     new (){
         Id = 5,
@@ -61,9 +61,16 @@ public class GamesClient(HttpClient httpClient)
         Price = 5.99M,
         ReleaseDate = new DateOnly(2011,11,22)}, 
 
+    new (){
+        Id = 8,
+        Name = "Clash Of Clans",
+        Genre = "Strategy",
+        Price = 1M,
+        ReleaseDate = new DateOnly(2010,05,10)},
+
     ];
 
-    private readonly Genre[] genres = new GenresClient(httpClient).GetGenres();
+    private readonly Genre[] genres = new GenresClient().GetGenres();
 
     public GameSummary[] GetGames() => [.. games];
 
@@ -102,7 +109,7 @@ public class GamesClient(HttpClient httpClient)
         {
             Id = game.Id,
             Name = game.Name,
-            GenreId = game.Id.ToString(),
+            GenreId = genre.Id.ToString(),
             Price = game.Price,
             ReleaseDate = game.ReleaseDate,
 

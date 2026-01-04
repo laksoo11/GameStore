@@ -3,7 +3,7 @@ using GameStore.Frontend.Models;
 
 namespace GameStore.Frontend.Clients;
 
-public class GenresClient(HttpClient httpClient)
+public class GenresClient
 {
     private readonly Genre[] genres =
     [
@@ -30,6 +30,10 @@ public class GenresClient(HttpClient httpClient)
          new (){
             Id = 5,
             Name = "Kids and Family"
+        },
+         new (){
+            Id = 6,
+            Name = "Strategy"
         },
     ];
 
